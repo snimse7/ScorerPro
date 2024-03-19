@@ -1,0 +1,44 @@
+
+<div class="select">
+    <nz-select nzPlaceHolder="Select FromatType" [(ngModel)]="category" (ngModelChange)="getRankings()">
+        <nz-option nzValue="teams" nzLabel="Teams"></nz-option>
+        <nz-option nzValue="batsmen" nzLabel="Batsmen"></nz-option>
+        <nz-option nzValue="bowlers" nzLabel="Bowlers"></nz-option>
+        <nz-option nzValue="allrounders" nzLabel="All-Rounders"></nz-option>
+    
+    </nz-select>
+    
+    <nz-select nzPlaceHolder="Select Category" [(ngModel)]="formatType" (ngModelChange)="getRankings()">
+        <nz-option nzValue="odi" nzLabel="ODI"></nz-option>
+        <nz-option nzValue="t20" nzLabel="T20I"></nz-option>
+        <nz-option nzValue="test" nzLabel="Test"></nz-option>
+    
+    </nz-select>
+</div>
+
+
+<nz-table #smallTable nzSize="small" [nzData]="rankings">
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Rating</th>
+            <th>Points</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of smallTable.data">
+            <td>{{ data.rank }}</td>
+            <td>{{ data.name }}</td>
+            <td>{{ data.country }}</td>
+            <td>{{ data.rating }}</td>
+            <td>{{ data.points }}</td>
+
+        </tr>
+    </tbody>
+</nz-table>
+
+
+<router-outlet></router-outlet>
