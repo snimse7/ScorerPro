@@ -15,8 +15,9 @@ export class MatchDescriptionComponent {
       arr5:any[]=[];
       wicket5:any[]=[];
       bowling4:any[]=[];
+      isSpinning=true;
       ngOnInit(){
-
+        this.isSpinning=true;
         this.activatedRoute.params.subscribe(paramsData=>{
           let id=paramsData['id'];
           let playerId:number=id;
@@ -88,6 +89,7 @@ export class MatchDescriptionComponent {
             window.alert(error.message);
           }
         );
+        this.isSpinning=false;
         })
 
         

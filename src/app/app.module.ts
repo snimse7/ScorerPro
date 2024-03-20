@@ -30,6 +30,8 @@ import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
+import { NzSpinModule } from 'ng-zorro-antd/spin';
+import { NzAlertModule } from 'ng-zorro-antd/alert';
 
 import { RankingsComponent } from './CricInfo/rankings/rankings.component';
 import { PlayerInfoHomeComponent } from './CricInfo/player-info-home/player-info-home.component';
@@ -90,8 +92,9 @@ registerLocaleData(en);
     NzIconModule,
     NzGridModule,
     NzTabsModule,
-    NzDescriptionsModule
-    
+    NzDescriptionsModule,
+    NzSpinModule,
+    NzAlertModule
     
   ],
   providers: [

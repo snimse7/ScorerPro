@@ -1,6 +1,8 @@
+
+ 
 <br>
 <div class="scorecard">
-
+    <!-- <div class="loader"></div> -->
   <div>
     <h5>{{data.matchHeader.matchDescription}}</h5>
     <h5>{{data.status}}</h5>
@@ -19,7 +21,7 @@
         [attr.aria-labelledby]="'heading' + match.inningsId" data-bs-parent="#accordionExample">
         <div class="accordion-body">
 
-          <table class="table table-responsive">
+            <nz-table #basicTable [nzData]="arr5" [nzScroll]="{ x: '1000px', y: '240px' }" nzSize="small">
             <thead>
               <tr>
                 <th scope="col">Batter</th>
@@ -43,12 +45,12 @@
 
               </tr>
             </tbody>
-          </table>
+        </nz-table>
 
           <br>
           <br>
 
-          <table class="table table-responsive">
+          <nz-table #basicTable [nzData]="arr5" [nzScroll]="{ x: '1000px', y: '240px' }" nzSize="small">
             <thead>
               <tr>
                 <th scope="col">Bowler</th>
@@ -74,7 +76,7 @@
                 <td>{{datal.economy}}</td>
               </tr>
             </tbody>
-          </table>
+          </nz-table>
           <div class="row">
             <div class="col-sm-6">
 
