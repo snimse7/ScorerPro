@@ -1,0 +1,18 @@
+[build]
+  # Directory to start the build process
+  base = "dist/"
+  # Command to build your Angular project
+  command = "ng build"
+  # Publish directory where the built files will be placed
+  publish = "dist/ng-scorer"
+
+[build.environment]
+  # Set the NODE_ENV environment variable to production
+  NODE_ENV = "production"
+
+# Optional: Redirects rules
+[[redirects]]
+  # Redirect all requests to index.html
+  from = "/*"
+  to = "/index.html"
+  status = 200
